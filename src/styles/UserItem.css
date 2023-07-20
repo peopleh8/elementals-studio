@@ -1,0 +1,138 @@
+.user-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-item.active .user-item__count {
+  color: #7250b4;
+}
+
+.user-item.active .user-item__photo::before {
+  opacity: 1;
+}
+
+.user-item.active .user-item__footer {
+  color: orange;
+}
+
+.user-item + .user-item {
+  margin-top: 15px;
+}
+
+.user-item__count {
+  font-weight: 700;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: color .2s ease;
+  width: 30px;
+}
+
+.user-item__block {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 20px);
+}
+
+.user-item__photo {
+  margin-right: 10px;
+  position: relative;
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.user-item__photo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 2px solid #7250b4;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+.user-item__photo-inner {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.user-item__photo svg,
+.user-item__photo img {
+  display: block;
+}
+
+.user-item__photo svg {
+  width: 85%;
+  height: 85%;
+}
+
+.user-item__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-item__info {
+  width: calc(100% - 70px);
+}
+
+.user-item__header {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-item__body {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-item__time {
+  color: #7250b4;
+}
+
+.user-item__speed {
+  color: #3A88F0;
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.user-item__speed::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #3A88F0;
+}
+
+.user-item__footer {
+  font-size: 14px;
+  color: rgba(0,0,0,.6);
+  transition: color .2s ease;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
